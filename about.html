@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<body style="background-color:powderblue;">
+<center>
+
+<font size="24">
+<h1>Vega</h1>
+</font>
+<button onclick="parseURL()">Entrer dans le QCM</button>
+</center>
+<p id="forgedURL"></p>
+
+<script>
+function parseURL() {
+  var forgedURL;
+  var idSess = prompt("Identification du QCM (4 chiffres) :", "0000");
+  if (idSess.length > 5 || idSess == "") {
+      forgedURL = "User cancelled the prompt.";
+    } else {
+       forgedURL = "https://vega.supmaritime.fr/mod/quiz/view.php?id=" + idSess;
+
+      }
+location.replace(forgedURL)
+}
+
+</script>
+
+</body>
+</html>
